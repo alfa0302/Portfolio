@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Itim&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@keyframes moveUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+    display: none;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    display: block;
+  }
+}
+
+.moveUp {
+  animation: moveUp 2s ease;
+}
+
+.moveRight {
+  animation: moveRight 2s ease;
+}
+
+.project:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.project:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.project:nth-child(4) {
+  animation-delay: 600ms;
+}
+
+.project:nth-child(5) {
+  animation-delay: 800ms;
+}
+
+.project:nth-child(6) {
+  animation-delay: 1000ms;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier Prime", monospace;
+}
+
+section {
+  min-height: 50vh;
+  margin: 3rem 0;
+}
+
+
+#custom-header {
+  list-style-type: none;
+  background-color: #ff9000f2;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  color: white;
+  width: 40px;
+  /* border-left: 1px solid white; */
+}
+
+#custom-nav-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.custom-nav-link div {
+  transform: rotate(90deg);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  padding: 1px 5px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-nav-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.custom-nav-link:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+.custom-list {
+  background-color: white;
+  color: #ff9000f2;
+}
+
+main {
+  color: white;
+}
+
+#main {
+  background-image: url('images/image.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: 0;
+}
+
+#home-content {
+  width: 100%;
+  height: 100vh;
+  background-color: #ff9000f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#intro div {
+  margin: 2rem 0;
+  font-size: 20px;
+
+}
+
+#intro h1 {
+  transform: rotate(-10deg);
+  margin-bottom: 2em;
+  font-family: "Kaushan Script";
+  font-size: 50px;
+}
+
+#intro h5 {
+  margin: 2rem 0;
+}
+
+#details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#details img {
+  margin: 1em;
+  width: 2em;
+}
+
+#details img:hover {
+  cursor: pointer;
+}
+
+#about {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about h1 {
+  margin: 1em 0;
+  color: #ff9000f2;
+}
+
+#contact-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  text-align: left;
+  color: rgb(77, 77, 77);
+  width: 30%;
+}
+
+#contact-info p b {
+  color: black;
+}
+
+#contact-info p a {
+  text-decoration: none;
+  color: rgb(77, 77, 77);
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  text-align: left;
+}
+
+#about-me p {
+  color: rgb(77, 77, 77);
+}
+
+
+
+#experience {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  color: #ff9000f2;
+  border-bottom: 1px solid black;
+}
+
+#experience h1 {
+  text-align: center;
+  margin: 1em;
+}
+
+#exp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exp-heading {
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+  color: black;
+  padding: 5px;
+  margin: 2rem 0 0;
+  font-weight: 700;
+  font-size: 24px;
+  width: 10em;
+}
+
+.heading-two {
+  margin-top: 0;
+}
+
+.exp {
+  display: flex;
+}
+
+.company {
+  width: 50%;
+  padding: 2em 3em;
+  text-align: right;
+}
+
+.company-name {
+  color: rgb(127, 121, 121);
+}
+
+.company-info {
+  color: black;
+}
+
+.null {
+  width: 50%;
+
+}
+
+.null-one,
+.null-three {
+  border-left: 1px solid rgb(127, 121, 121);
+}
+
+.company-two {
+  border-left: 1px solid rgb(127, 121, 121);
+  text-align: left;
+}
+
+.company-one,
+.company-three {
+  text-align: right;
+}
+
+#hire {
+  background-color: #ff9000f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hire h1 {
+  margin: 1rem;
+}
+
+#hire p {
+  font-size: 20px;
+}
+
+#hire button {
+  background-color: white;
+  color: #ff9000f2;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+#hire button img {
+  height: 20px;
+}
+
+/* Projects Section */
+#projects {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects h1 {
+  color: #ff9000f2;
+  margin: 1.5em;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.project {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding: 2em;
+  margin: 1em;
+  border: 1px solid #ff9000f2;
+}
+
+.project-img {
+  width: 90%;
+}
+
+.project h4 {
+  margin: 1em;
+}
+
+.project div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project div img {
+  width: 2em;
+  margin: 1em;
+}
+
+.project div img:hover {
+  cursor: pointer;
+}
+
+/* Contacts Section */
+
+#contact {
+  display: flex;
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  padding: 1em;
+}
+
+.image img {
+  width: 80%;
+}
+
+.contact {
+  width: 60%;
+}
+
+.contact h1 {
+  color: #ff9000f2;
+}
+
+.contact input,
+.contact textarea {
+  margin: 1em 0;
+  padding: 0.5em;
+  width: 70%;
+}
+
+#submit-button {
+  background-color: #ff9000f2;
+  color: white;
+  margin: 1em 0;
+  border: none;
+  padding: 0.5em;
+  width: 100px;
+  border-radius: 5px;
+}
+
+#submit-button:hover {
+  background-color: white;
+  color: #ff9000f2;
+  border: 1px solid #ff9000f2;
+}
+
+#submit-button:focus {
+  border: none;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
