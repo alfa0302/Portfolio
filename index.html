@@ -1,229 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AlfiyaN</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rotating Squares Field</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+    </style>
   </head>
   <body>
+    <nav>
+      <div class="logo">A.</div>
+    </nav>
     <main>
-      <section id="main">
-        <div id="home-content">
-          <div id="intro" class="animated" data-animation="moveUp">
-            <h1>- Alfiya Noushad -</h1>
-            <h5>Software Engineer | Web Developer | MuleSoft Developer</h5>
+      <div class="cursor"></div>
+      <section id="home">
+        <div class="intro">
+          <h2 class="home-section-animate">Hello I'm</h2>
+          <h1 class="home-section-animate">Alfiya Noushad</h1>
+          <p class="home-section-animate">
+            Software Developer specializing in full-stack development and API
+            integration. Focused on writing clean code and creating impactful
+            digital products.
+          </p>
+          <div class="buttons home-section-animate">
+            <a href="mailto:alfiyanijin@gmail.com"
+              ><button>
+                <span>Contact me</span>
+                <i class="ri-mail-send-line"></i></button
+            ></a>
+            <a href=""
+              ><button id="resume-button">
+                <span>Download my cv</span>
+                <i class="ri-arrow-down-line"></i></button
+            ></a>
           </div>
-          <div id="details">
-            <a href="https://www.linkedin.com/in/alfiya-n-b6a230172/"
-              ><img src="images/linkedin.png" alt="linkedin"
-            /></a>
-            <a href="https://github.com/alfa0302"
-              ><img src="images/github.png" alt="git"
-            /></a>
-            <a href="https://www.instagram.com/"
-              ><img src="images/instagram.png" alt="insta"
-            /></a>
+        </div>
+        <canvas id="scene-small" class="poly poly-small"></canvas>
+        <canvas id="scene" class="poly"></canvas>
+
+        <div class="scroll-down">
+          <svg class="text-circle" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path
+                id="sd-circle"
+                d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"
+              />
+            </defs>
+
+            <text class="circle-text" fill="#ffffff">
+              <textPath href="#sd-circle" startOffset="0">
+                SCROLL DOWN • SCROLL DOWN •
+              </textPath>
+            </text>
+          </svg>
+          <div>
+            <div class="down-icon">
+              <i class="ri-arrow-down-long-line"></i>
+            </div>
           </div>
         </div>
       </section>
-      <section id="about" class="animated" data-animation="moveUp">
-        <h1>About Me</h1>
-        <div id="contact-div">
-          <div id="about-me">
-            <h4>Hello There!</h4>
-            <p>
-              I’m Alfiya, a passionate and driven Software Engineer with two
-              years of experience in the IT industry.From crafting simple web
-              pages to implementing full-scale integration solutions, I’ve honed
-              my technical expertise through hands-on projects and real-world
-              challenges. As a lifelong learner, I continually explore new tools
-              and technologies to stay ahead in this fast-paced industry.
-              <br />
-              <br />
-              When I’m not coding, you’ll find me exploring creative hobbies,
-              improving my fitness with a focus on health and wellness, or
-              cooking up new recipes. Let’s connect and create something amazing
-              together!
+      <section id="about">
+        <div class="mil-lines-place mil-light">
+          <svg
+            width="250"
+            viewBox="0 0 300 1404"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="mil-lines"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
+              class="mil-move"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
+              class="mil-move"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
+              class="mil-move"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M300 1175H0V1174H300V1175Z"
+              class="mil-move"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
+              class="mil-move"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z"
+              class="mil-move"
+            ></path>
+          </svg>
+        </div>
+        <div class="about-and-skills">
+          <div class="about">
+            <h2 class="about-section-text-animate">
+              <span class="bold">About</span> Me
+            </h2>
+            <p class="about-section-text-animate">
+              <span class="bold">I’m Alfiya</span>, a Software Developer with
+              nearly 3 years of experience in full-stack development and API
+              integration. I hold a Bachelor’s degree in Engineering and have
+              hands-on expertise in API integration and Full Stack development.
+              I’m passionate about building efficient, scalable applications and
+              continuously improving my technical and problem-solving skills.
             </p>
+            <!-- <div class="contact-icons">
+              <a href=""><i class="ri-linkedin-box-line"></i></a>
+              <a href=""><i class="ri-github-fill"></i></a>
+              <a href=""><i class="ri-mail-line"></i></a>
+            </div> -->
+          </div>
+          <div class="skills">
+            <div class="skill-list">
+              <h2><span class="bold">My</span> Skills</h2>
+              <ul>
+                <li><i class="ri-html5-line"></i>HTML</li>
+                <li><i class="ri-css3-line"></i>CSS</li>
+                <li><i class="ri-javascript-line"></i>JavaScript</li>
+                <li><i class="ri-nodejs-line"></i>Nodejs</li>
+                <li><img src="/images/mongodb.svg" alt="" />MongoDB</li>
+                <li><i class="ri-database-2-line"></i>MySQL</li>
+                <li><i class="ri-reactjs-line"></i>React</li>
+                <li><i class="ri-bootstrap-line"></i>BootStrap</li>
+                <li><i class="ri-tailwind-css-line"></i>Tailwind</li>
+                <li><img src="/images/express.svg" alt="express" />Express</li>
+                <li>
+                  <img src="/images/aws.svg" alt="amazon web service" />AWS
+                </li>
+                <li><i class="ri-wordpress-fill"></i>Wordpress</li>
+                <li><i class="ri-seo-fill"></i>SEO</li>
+                <li>
+                  <img
+                    src="/images/mulesoft.svg"
+                    alt="amazon web service"
+                  />MuleSoft
+                </li>
+                <li><i class="ri-github-fill"></i>Github</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-      <section id="experience">
-        <h1 class="animated" data-animation="moveUp">My Experience</h1>
-        <div id="exp">
-          <span class="exp-heading">WORK EXPERIENCE</span>
-          <div class="exp">
-            <div class="company company-one animated" data-animation="moveUp">
-              <h4>Software Engineer</h4>
-              <p class="company-name">
-                SkyWalk Global : 2023 January - 2024 June
-              </p>
-              <p class="company-info">
-                Skywalk Global is a renowned technology solutions provider known
-                for delivering innovative IT services across the globe. During
-                my tenure as a Software Engineer, I gained valuable experience
-                in Web Development and MuleSoft Integration. Collaborating with
-                a skilled team, I contributed to impactful projects that
-                enhanced efficiency and fostered growth.
-              </p>
+      <section class="projects">
+        <h1 class="project-section-text-animate">Projects</h1>
+        <div class="project-block project-section-text-animate">
+          <div class="project-item">
+            <div class="progress"></div>
+            <div class="thumbnail">
+              <img src="/images/amazon.png" alt="project image" width="100%" />
             </div>
-            <div class="null null-one"></div>
-          </div>
-          <div class="exp">
-            <div class="null null-two"></div>
-            <div class="company company-two animated">
-              <div class="animated" data-animation="moveUp">
-                <h4>Full Stack Developer Intern</h4>
-                <p class="company-name">Kompetenzen Technologies</p>
-                <p class="company-info">
-                  Kompetenzen Technologies is a dynamic technology firm known
-                  for nurturing young talent and fostering innovation. During my
-                  internship as a Full Stack Developer, I contributed to
-                  enhancing web applications and optimizing performance using
-                  Java, JavaScript, and SQL.
-                </p>
-              </div>
+            <h3 class="project-title">Amazon Clone</h3>
+            <div class="description">
+              A responsive Amazon clone built with HTML, CSS, and JavaScript.
+              Browse products, search and filter listings, add items to cart,
+              and manage orders with state and a clean, accessible interface.
+            </div>
+            <div class="project-code">
+              <a href="https://github.com/alfa0302/Amazon-clone" target="_blank"
+                ><i class="ri-github-fill"></i
+              ></a>
+              <a href="https://alfa0302.github.io/Amazon-clone/" target="_blank"
+                ><i class="ri-cloud-line"></i
+              ></a>
             </div>
           </div>
-          <span class="exp-heading heading-two">EDUCATION</span>
-          <div class="exp exp-three">
-            <div class="company company-three animated" data-animation="moveUp">
-              <h4>Bachelors in Technology</h4>
-              <p class="company-name">
-                Kerala Technological University : Electronics and Communication
-                Engineering
-              </p>
-              <p class="company-info">
-                Equipped with a strong foundation in technology and engineering
-                principles, my degree program honed my analytical and
-                problem-solving skills, preparing me for a dynamic career in the
-                IT and software development fields.
-              </p>
+          <div class="project-item">
+            <div class="progress"></div>
+            <div class="thumbnail">
+              <img
+                src="images/homeheaven.png"
+                alt="project image"
+                width="100%"
+              />
             </div>
-            <div class="null null-three"></div>
+            <h3 class="project-title">Home Heaven</h3>
+            <div class="description">
+              A modern real estate marketplace built with MongoDB, Express,
+              React, and Node. Explore properties, apply filters, create
+              listings, authenticate securely, and manage profiles with smooth
+              performance, design, and intuitive workflows.
+            </div>
+            <div class="project-code">
+              <a href="https://github.com/alfa0302/Home-Heaven" target="_blank"
+                ><i class="ri-github-fill"></i
+              ></a>
+              <a href="https://home-heaven-b55w.onrender.com" target="_blank"
+                ><i class="ri-cloud-line"></i
+              ></a>
+            </div>
           </div>
-        </div>
-      </section>
-      <section id="projects">
-        <h1 class="animated" data-animation="moveUp">My Works</h1>
-        <div class="projects">
-          <div class="project animated" data-animation="moveRight">
-            <img
-              class="project-img"
-              src="images/yelpcamp.png"
-              alt="project-image"
-            />
-            <h4>YelpCamp</h4>
-            <p>
-              YelpCamp is a full-stack web application that allows users to
-              browse, create, and review campgrounds. Built using the MERN stack
-              (MongoDB, Express.js, React, Node.js), it features user
-              authentication, interactive maps, and cloud-based image uploads.
-              The app includes CRUD functionality, enabling users to add, edit,
-              and delete campgrounds while maintaining security and
-              responsiveness. YelpCamp showcases my ability to develop scalable,
-              user-friendly web applications with modern technologies.
-            </p>
-            <div>
-              <a href="https://github.com/alfa0302/Yelp-Camp"
-                ><img src="images/git.png" alt="git"
-              /></a>
+          <div class="project-item">
+            <div class="progress"></div>
+            <div class="thumbnail">
+              <img src="images/yelpcamp.png" alt="project image" width="100%" />
+            </div>
+            <h3 class="project-title">YelpCamp</h3>
+            <div class="description">
+              A full stack campground platform built with MongoDB, Express,
+              React, and Node. Browse, add, edit, and review sites, with
+              authentication, interactive maps, image uploads, and CRUD
+              operations across an interface.
+            </div>
+            <div class="project-code">
+              <a href="https://github.com/alfa0302/Yelp-Camp" target="_blank"
+                ><i class="ri-github-fill"></i
+              ></a>
               <a
                 href="https://yelp-camp-ouxll1kxd-alfa0302s-projects.vercel.app/"
-                ><img src="images/web.png" alt="web"
-              /></a>
-            </div>
-          </div>
-          <div class="project animated" data-animation="moveRight">
-            <img
-              class="project-img"
-              src="images/amazon.png"
-              alt="project-image"
-            />
-            <h4>Amazon clone</h4>
-            <p>
-              The Amazon clone project is a web application built using HTML,
-              CSS, and JavaScript to simulate the core functionality of Amazon.
-              It allows users to browse through product listings, apply search
-              filters, add items to the shopping cart, and manage their orders.
-              The application features a responsive design, ensuring a seamless
-              experience across different devices. The project serves as a
-              practical exercise to enhance front-end development skills while
-              implementing essential e-commerce features like product search,
-              filtering, and cart management.
-            </p>
-            <div>
-              <a href="https://github.com/alfa0302/Amazon-clone"
-                ><img src="images/git.png" alt="git"
-              /></a>
-              <a href="https://alfa0302.github.io/Amazon-clone/"
-                ><img src="images/web.png" alt="web"
-              /></a>
-            </div>
-          </div>
-          <div class="project animated" data-animation="moveRight">
-            <img
-              class="project-img"
-              src="images/homeheaven.png"
-              alt="project-image"
-            />
-            <h4>Home Heaven</h4>
-            <p>
-              Home Heaven is a modern, full-stack real estate marketplace
-              application designed to simplify property buying, selling, and
-              renting. Built with the MERN stack (MongoDB, Express.js, React,
-              Node.js), it offers a seamless user experience with advanced
-              search, filtering, and listing management.With Home Heaven, users
-              can effortlessly explore, list, and manage properties in a smooth
-              and intuitive interface. Whether you're a buyer, seller, or agent,
-              this platform ensures a hassle-free real estate experience.
-            </p>
-            <div>
-              <a href="https://github.com/alfa0302/Home-Heaven"
-                ><img src="images/git.png" alt="git"
-              /></a>
-              <a href="https://home-heaven-b55w.onrender.com"
-                ><img src="images/web.png" alt="web"
-              /></a>
+                target="_blank"
+                ><i class="ri-cloud-line"></i
+              ></a>
             </div>
           </div>
         </div>
       </section>
-      <div id="hire" class="animated" data-animation="moveUp">
-        <h1>Hire me!</h1>
-        <p>Download my resume here.</p>
-        <button id="resume-download">
-          Resume <img src="images/download.png" alt="download" />
-        </button>
-      </div>
-      <section id="contact">
-        <div class="image"><img src="images/contact.jpg" alt="image" /></div>
-        <div class="contact">
-          <h1>Contact</h1>
-          <form id="contact-form" class="animated" data-animation="moveRight">
-            <input type="text" id="name" placeholder="Your name" required />
-            <input type="email" id="email" placeholder="Email" required />
-            <input type="text" id="subject" placeholder="Subject" />
-            <textarea
-              id="message"
-              rows="5"
-              placeholder="Write..."
-              required
-            ></textarea>
-            <button id="submit-button" type="submit">Submit</button>
-            <span id="submit-status"></span>
-          </form>
+      <section class="contact">
+        <p class="contact-heading contact-section-text-animate">
+          <span class="bold">Let's make</span> an impact together.
+          <span class="bold">Ready when</span> you are.
+        </p>
+        <div class="line">
+          <svg
+            id="wavy"
+            viewBox="0 0 1000 200"
+            width="1000"
+            height="200"
+            style="display: block"
+          >
+            <path
+              id="curve"
+              d="M 10 100 Q 500 100 990 100"
+              stroke="white"
+              fill="transparent"
+            />
+          </svg>
+        </div>
+        <div class="contact-methods contact-section-text-animate">
+          <div class="buttons">
+            <a class="email" href="mailto:alfiyanijin@gmail.com">
+              <button>
+                <span>get in touch</span>
+                <i class="ri-mail-send-line"></i>
+              </button>
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
+    <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="mouse-trail.js"></script>
+    <script src="lenis-scroll.js"></script>
+    <script src="scroll-animations.js"></script>
+    <script src="rotating-square-animation.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

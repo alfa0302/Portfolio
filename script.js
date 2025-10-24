@@ -1,25 +1,25 @@
-//applying animations with intersection observer
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const animation = entry.target.dataset.animation;
-    if (entry.isIntersecting) {
-      entry.target.classList.add(animation);
-    }
-    //  else {
-    //   entry.target.classList.remove(animation);
-    // }
-  });
-});
-
-const animatedElements = document.querySelectorAll(".animated");
-animatedElements.forEach((element) => {
-  observer.observe(element);
-});
-
-//download resume
-document.getElementById("resume-download").addEventListener("click", () => {
+// download resume
+document.getElementById("resume-button").addEventListener("click", () => {
   const link = document.createElement("a");
   link.href = "resume/AlfiyaN.pdf";
   link.download = "AlfiyaN.pdf";
   link.click();
+});
+
+// scroll down button text
+const circleText = document.querySelector(".circle-text textPath");
+const scrollDownButton = document.querySelector(".scroll-down");
+scrollDownButton.addEventListener("mouseenter", () => {
+  circleText.style.fill = "white";
+});
+scrollDownButton.addEventListener("mouseleave", () => {
+  circleText.style.fill = " rgba(255, 255, 255, 0.2)";
+});
+
+// scrolldown button scroll
+scrollDownButton.addEventListener("click", () => {
+  window.scrollBy({
+    top: 800,
+    behavior: "smooth",
+  });
 });
