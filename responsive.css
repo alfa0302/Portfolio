@@ -6,6 +6,7 @@
 
   nav {
     position: static;
+    padding-left: 50px;
   }
 
   #scene {
@@ -111,7 +112,7 @@
 
   .contact {
     padding: 30px 20px;
-    min-height: 100px;
+    min-height: 50vh !important;
     justify-content: start;
   }
 
