@@ -23,3 +23,12 @@ scrollDownButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+const smallPolygon = document.getElementById("scene-small");
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > 100) {
+    smallPolygon.style.zIndex = 0;
+  } else {
+    smallPolygon.style.zIndex = 1;
+  }
+});

@@ -144,7 +144,7 @@ gsap.from(".contact-section-text-animate", {
   stagger: 1,
   scrollTrigger: {
     trigger: ".contact",
-    start: "top 50%",
+    start: "top 90%",
     // markers: true,
   },
 });
