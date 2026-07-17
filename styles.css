@@ -11,7 +11,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   color: white;
-  font-family: "Outfit", sans-serif;
+  font-family: "Geist Pixel", sans-serif;
 }
 
 .bold {
@@ -33,7 +33,7 @@ nav .menu-box {
   display: flex;
   gap: 30px;
   list-style: none;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-weight: 500;
   font-size: 20px;
 }
@@ -47,8 +47,7 @@ nav .menu-box li a {
 }
 
 nav .logo {
-  font-family: "Outfit",
-    sans-serif;
+  /* font-family: "Outfit",sans-serif; */
   font-weight: 400;
   font-size: 48px;
   height: 60px;
@@ -92,8 +91,8 @@ section {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 40px;
-  font-family: "Outfit", serif;
+  gap: 20px;
+  /* font-family: "Outfit", serif; */
   position: absolute;
   left: 100px;
   top: 0;
@@ -134,7 +133,7 @@ section {
   border: none;
   border-radius: 30px;
   font-size: 13px;
-  font-family: "Outfit", sans-serif;
+  /* font-family: "Outfit", sans-serif; */
   text-transform: uppercase;
   letter-spacing: 2px;
   display: flex;
@@ -202,7 +201,7 @@ button i {
 }
 
 .circle-text textPath {
-  font-family: "Montserrat", system-ui, sans-serif;
+  /* font-family: "Montserrat", system-ui, sans-serif; */
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 8px;
@@ -251,7 +250,6 @@ button i {
 .project-block {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-item {
@@ -262,6 +260,7 @@ button i {
   gap: 30px;
   justify-content: center;
   position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .progress {
